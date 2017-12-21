@@ -5,9 +5,13 @@ const handleChange = (updateNewTodo) => (evt) => {
   updateNewTodo(evt.target.value)
 }
 
+const handleSubmit = (saveTodo) => (evt) => {
+  evt.preventDefault()
+  saveTodo()
+}
 
-const NewTodo = ({ todoList, updateNewTodo }) => (
-  <form>
+const NewTodo = ({ todoList, updateNewTodo, saveTodo }) => (
+  <form onSubmit={ handleSubmit(() => saveTodo(todoList.newTodo)) }>
     <div className="form-group">
      <label htmlFor="newTodo">Enter a new todo</label>
      <input

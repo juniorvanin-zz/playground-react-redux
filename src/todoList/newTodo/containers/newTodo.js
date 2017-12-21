@@ -1,14 +1,16 @@
 import NewTodo from '../components/newTodo'
 import { connect } from 'react-redux'
-import { updateNewTodo } from '../../../actions'
-
+import { updateNewTodo, saveTodo } from '../../../actions'
 
 const mapStateToProps = (state) => state
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateNewTodo: word => {
-      dispatch(updateNewTodo(word))
+    updateNewTodo: todo => {
+      dispatch(updateNewTodo(todo))
+    },
+    saveTodo: newTodo => {
+      dispatch(saveTodo(newTodo))
     }
   }
 }
