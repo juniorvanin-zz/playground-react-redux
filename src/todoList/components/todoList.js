@@ -1,11 +1,20 @@
 import React from 'react'
 
 const TodoList = ({ todoList }) => (
-  <div>
-    <ul className="list-group">
-      { todoList.todos.map(todo => <li className="list-group-item" key={ todo.id }> { todo.value } </li>) }
-    </ul>
-  </div>
+  <form>
+    {
+      todoList.todos.map(todo =>
+        (
+          <div className="form-check">
+            <label className="form-check-label">
+              <input className="form-check-input" type="checkbox" value={ todo.id } />
+              { todo.value }
+            </label>
+          </div>
+        )
+      )
+    }
+  </form>
 )
 
 export default TodoList
