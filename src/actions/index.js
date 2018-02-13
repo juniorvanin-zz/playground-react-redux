@@ -11,3 +11,10 @@ export const updateSearchInput = word => {
     word
   }
 }
+
+export const addToCart = id => {
+  return {
+    type: 'ADD_ITEM_TO_CART',
+    id
+  }
+}
