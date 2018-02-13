@@ -10,7 +10,7 @@ const handleOnChange = (updateSearchInput) => (evt) => {
     updateSearchInput(evt.target.value)
 }
 
-const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput }) => (
+const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput, searchResultMessage }) => (
   <div className="search-bar">
     <form onSubmit={ handleSubmit(() => searchItemsByWord(searchInput)) } >
       <input
@@ -20,8 +20,9 @@ const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput }) => (
         autoComplete="off"
         onChange={handleOnChange(updateSearchInput)}
         value={ searchInput } />
-      <button type="submit">Submit</button>
+      <button type="submit">Search</button>
     </form>
+    <span> { searchResultMessage } </span>
   </div>
 )
 

@@ -4,7 +4,8 @@ import { searchItemsByWord, updateSearchInput } from '../../actions'
 
 const mapStateToProps = (state) => {
   return {
-    searchInput: state.form.searchedItem
+    searchInput: state.form.searchedItem,
+    searchResultMessage: state.items.searchResultMessage
   }
 }
 

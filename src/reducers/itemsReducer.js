@@ -17,16 +17,31 @@ const initState = {
 }
 
 const itemsReducer = (state = initState, action) => {
-  console.log(action)
+
   switch (action.type) {
     case "SEARCH_ITEM_BY_WORD":
+    {
+      const searchedItems = state.availables.filter(item => item.title.includes(action.word))
+
       return {
         ...state,
-          searchedItems: state.availables.filter(item => item.title.includes(action.word))
+        searchedItems,
+        searchResultMessage: buildSearchMessage(searchedItems.length)
       }
+    }
     default:
       return state
   }
+}
+
+const buildSearchMessage = numberOfItems => {
+  if(numberOfItems === 1) {
+    return "Only one result was found."
+  } else if (numberOfItems > 1) {
+    return numberOfItems + " results were found."
+  }
+
+  return "No results found for the given search."
 }
 
 export default itemsReducer

@@ -1,5 +1,5 @@
 const initState = {
-    searchedItem: "amet A"
+    searchedItem: ""
 }
 
 const formReducer = (state = initState, action) => {

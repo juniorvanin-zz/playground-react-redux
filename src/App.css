@@ -1,6 +1,7 @@
 body {
   color: #5f6a7d;
   font-family: "Square Market",Helvetica,Arial,sans-serif;
+  font-weight: 100;
 }
 
 .container {
@@ -12,21 +13,39 @@ body {
   max-width: 1140px;
 }
 
-.search-bar {
+.search-bar form {
   display: flex;
   flex-wrap: no-wrap;
   flex-direction: row;
   justify-content: center;
-  margin: 40px 0px;
 }
 
-.search-bar input[type=text] {
+.search-bar span {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px 0px 50px 0px;
+  font-size: 18px;
+}
+
+.search-bar input {
     width: 100%;
     box-sizing: border-box;
     background-color: white;
     border: 1px solid rgba(0,0,0,.15);
     padding: 12px;
-    font-size: 16px;
+    padding-left: 50px;
+    font-size: 20px;
+    background:url(./resources/magnifier-icon.svg) no-repeat;
+    background-size: 30px;
+    background-position: 7px;
+    color: #5f6a7d;
+
+}
+
+.search-bar input:focus {
+   outline: none;
+   border: 1px solid rgba(0,0,0,.40);
 }
 
 .search-bar button {
@@ -34,11 +53,9 @@ body {
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8;
-  display: inline-block;
   font-weight: 400;
   line-height: 1.25;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
@@ -50,12 +67,7 @@ body {
    display: flex;
    flex-wrap: wrap;
    color: #5f6a7d;
-   font-family: "Square Market",Helvetica,Arial,sans-serif;
    padding: 0px;
-}
-
-.search-bar form {
-  display: contents;
 }
 
 .shopping-card li {
