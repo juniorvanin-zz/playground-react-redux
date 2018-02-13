@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import todoList from './todoList'
+import itemsReducer from './itemsReducer'
 
 const reducers = combineReducers({
-  todoList
+  items: itemsReducer
 })
 
 export default reducers

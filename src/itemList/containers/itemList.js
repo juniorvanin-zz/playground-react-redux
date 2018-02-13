@@ -1,7 +1,7 @@
-import TodoList from '../components/todoList'
+import ItemList from '../components/itemList'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => state
 
 const connector = connect(mapStateToProps)
-export default connector(TodoList)
+export default connector(ItemList)
