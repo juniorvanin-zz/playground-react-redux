@@ -103,13 +103,20 @@ header {
 }
 
 .shopping-card button {
-  color: #fff;
-  background-color: #0275d8;
   padding: .5rem 1rem;
   font-size: 1rem;
   border: 1px solid transparent;
   padding: .5rem 1rem;
   font-size: 1rem;
+  color: #fff;
+}
+
+.shopping-card .add-to-cart {
+  background-color: #0275d8;
+}
+
+.shopping-card .remove-from-cart {
+  background-color: #d9534f;
 }
 
 
