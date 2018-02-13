@@ -1,14 +1,16 @@
 import React from 'react';
 import ItemList from './itemList/containers/itemList'
-import SearchBar from './searchBar/containers/searchBar'
+import Header from './header/components/header'
 
 import './App.css';
 
 const App = () => (
-  <div className="container">
-    <div className="item-list">
-      <SearchBar />
-      <ItemList />
+  <div>
+    <Header />
+    <div className="container">
+      <div className="item-list">
+        <ItemList />
+      </div>
     </div>
   </div>
 )

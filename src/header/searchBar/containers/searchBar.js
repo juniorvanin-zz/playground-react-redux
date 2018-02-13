@@ -1,6 +1,6 @@
 import SearchBar from '../components/searchBar'
 import { connect } from 'react-redux'
-import { searchItemsByWord, updateSearchInput } from '../../actions'
+import { searchItemsByWord, updateSearchInput } from '../../../actions'
 
 const mapStateToProps = (state) => {
   return {
