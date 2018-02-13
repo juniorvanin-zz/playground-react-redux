@@ -18,3 +18,10 @@ export const addToCart = id => {
     id
   }
 }
+
+export const removeFromCart = id => {
+  return {
+    type: 'REMOVE_ITEM_FROM_CART',
+    id
+  }
+}
