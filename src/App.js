@@ -1,12 +1,14 @@
 import React from 'react';
 import ItemList from './itemList/containers/itemList'
+import SearchBar from './searchBar/components/searchBar'
 
 import './App.css';
 
 const App = () => (
   <div className="container">
     <div className="item-list">
-        <ItemList />
+      <SearchBar />
+      <ItemList />
     </div>
   </div>
 )

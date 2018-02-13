@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+body {
+  color: #5f6a7d;
+  font-family: "Square Market",Helvetica,Arial,sans-serif;
 }
 
 .container {
@@ -11,19 +12,57 @@
   max-width: 1140px;
 }
 
+.search-bar {
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.search-bar input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.15);
+    padding: 12px;
+    font-size: 16px;
+}
+
+.search-bar button {
+  width: 100px;
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+}
+
 .shopping-card {
    display: flex;
    flex-wrap: wrap;
    color: #5f6a7d;
    font-family: "Square Market",Helvetica,Arial,sans-serif;
+   padding: 0px;
+}
+
+.search-bar form {
+  display: contents;
 }
 
 .shopping-card li {
   height: 430px;
-  width: 250px;
+  width: 265px;
   background: #f5f5f5;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin: 0px 10px 20px 10px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -40,7 +79,7 @@
   text-align: center;
   color: #2e3b4e;
   background-color: #90AFC5;
-  width: 230px;
+  width: 245px;
   height: 55px;
   align-self: flex-start;
 }
