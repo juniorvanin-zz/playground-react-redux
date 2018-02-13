@@ -1,18 +1,13 @@
-import uuidv4 from 'uuid/v4'
-
-export const updateNewTodo = word => {
+export const searchItemsByWord = word => {
   return {
-    type: 'UPDATE_NEW_TODO',
+    type: 'SEARCH_ITEM_BY_WORD',
     word
   }
 }
 
-export const saveTodo = todo => {
+export const updateSearchInput = word => {
   return {
-    type: 'SAVE_TODO',
-    todo: {
-      id: uuidv4(),
-      value: todo
-    }
+    type: 'UPDATE_SEARCH_INPUT',
+    word
   }
 }

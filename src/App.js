@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemList from './itemList/containers/itemList'
-import SearchBar from './searchBar/components/searchBar'
+import SearchBar from './searchBar/containers/searchBar'
 
 import './App.css';
 

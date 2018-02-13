@@ -1,10 +1,26 @@
 import React from 'react'
 
-const SearchBar = () => (
+const handleSubmit = (searchItemsByWord) => (evt) => {
+  evt.preventDefault()
+  searchItemsByWord()
+}
+
+const handleOnChange = (updateSearchInput) => (evt) => {
+    evt.preventDefault()
+    updateSearchInput(evt.target.value)
+}
+
+const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput }) => (
   <div className="search-bar">
-    <form>
-      <input type="text" id="searchedItem" placeholder="What are you looking for?" autocomplete="off"/>
-      <button type="submit" class="">Submit</button>
+    <form onSubmit={ handleSubmit(() => searchItemsByWord(searchInput)) } >
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="What are you looking for?"
+        autoComplete="off"
+        onChange={handleOnChange(updateSearchInput)}
+        value={ searchInput } />
+      <button type="submit">Submit</button>
     </form>
   </div>
 )
