@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
   return {
-    itemsQuantity: state.form.cart.itemsAdded.length,
+    items: state.items.availables.filter(item => state.form.cart.itemsAdded.includes(item.id))
   }
 }
 
