@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatMoney } from 'accounting'
 
 const handleOnClick = evt => {
 
@@ -24,17 +25,22 @@ const ShoppingCartResume = ({ items }) => (
 )
 
 const buildShoppingCartDetails = items => (
-  <ul>
-    {
-      items.map(item => (
-        <li>
-          <p className="title"> { item.title } </p>
-          <p className="price"> { item.price } </p>
-        </li>
-      ))
-    }
-  </ul>
+  <div>
+    <ul>
+      {
+        items.map(item => (
+          <li key={ item.id }>
+            <p className="title"> { item.title } </p>
+            <p className="price"> { formatMoney(item.price) } </p>
+          </li>
+        ))
+      }
+    </ul>
+    <hr/>
+    <p className="total">Total: { formatMoney(getTotal(items)) } </p>
+  </div>
 )
 
+const getTotal = items => items.map(item => item.price).reduce((a, b) => a + b, 0)
 
 export default ShoppingCartResume

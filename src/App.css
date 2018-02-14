@@ -174,7 +174,7 @@ header {
 }
 
 #shopping-cart-details li .title {
-  margin: 30px 20px 0px 0px;
+  margin: 20px 20px 0px 0px;
   list-style-type: none;
 }
 
@@ -185,6 +185,19 @@ header {
 
 #shopping-cart-details .empty-shopping-cart {
   margin: 20px;
+}
+
+#shopping-cart-details hr {
+  margin-right: 20px;
+  border: 0;
+  height: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#shopping-cart-details .total {
+  text-align: right;
+  margin-right: 20px;
 }
 
 .item-list {

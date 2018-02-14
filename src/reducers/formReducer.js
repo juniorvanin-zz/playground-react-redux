@@ -18,7 +18,7 @@ const formReducer = (state = initState, action) => {
       return {
         ...state,
         cart: {
-          itemsAdded: [ ...state.cart.itemsAdded.filter(item =>  item != action.id) ]
+          itemsAdded: [ ...state.cart.itemsAdded.filter(item =>  item !== action.id) ]
         }
     }
     case "UPDATE_SEARCH_INPUT":
