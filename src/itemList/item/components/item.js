@@ -1,25 +1,19 @@
 import React from 'react'
+import AddToShoppingCartButton from './../addToShoppingCartButton/containers/addToShoppingCartButton'
+import RemoveFromShoppingCartButton from './../removeFromShoppingCartButton/containers/removeFromShoppingCartButton'
 
-const handleSubmit = (addToCart) => (evt) => {
-  evt.preventDefault()
-  console.log(addToCart())
-
-  addToCart()
-}
-
-const Item = (item, addToCart) => {
-  console.log(addToCart)
-    return (
-    <form onSubmit={handleSubmit(() => addToCart({item.id}))}>
-      <li key={ item.id }>
-        <p className="price">${ item.price }</p>
-        <span>{ item.title }</span>
-        <img src="./shopping-cart.png" alt="ilustrative item" />
-        <p> { item.description }</p>
-        <button type="submit">Add to cart</button>
-      </li>
-    </form>
+const Item = ({ item, itemsAddedToCart }) => {
+  return (
+    <li>
+      <p className="price">${ item.price }</p>
+      <span>{ item.title }</span>
+      <img src="./shopping-cart.png" alt="ilustrative item" />
+      <p> { item.description }</p>
+      { isProductAddedToShoppingCart(itemsAddedToCart, item.id) ? <RemoveFromShoppingCartButton item={item}/> : <AddToShoppingCartButton item={item}/> }
+    </li>
   )
 }
+
+const isProductAddedToShoppingCart = (itemsAddedToCart, id) => itemsAddedToCart.find(item => item === id)
 
 export default Item
