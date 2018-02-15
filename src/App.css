@@ -156,6 +156,7 @@ header {
 #shopping-cart-details {
   width: 300px;
   position: absolute;
+  display: none;
   margin-top: 55px;
   margin-left: -200px;
   background-color: #ffffff;

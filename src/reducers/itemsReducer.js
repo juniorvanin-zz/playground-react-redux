@@ -1,4 +1,5 @@
 // @flow
+
 import type { ItemsState } from './../types/state'
 import type { ItemsActions } from './../types/actions'
 
@@ -52,6 +53,7 @@ const initState = {
       id: 12, title: 'Nemo enim ipsam voluptatem quia', description: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.', price: 24.50,
     },
   ],
+  searchResultMessage: '',
 }
 
 const itemsReducer = (state: ItemsState = initState, action: ItemsActions) => {

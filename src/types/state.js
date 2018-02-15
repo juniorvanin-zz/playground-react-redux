@@ -13,7 +13,8 @@ export type FormState = {
 
 export type ItemsState = {
   searchedItems: Array<Item>,
-  availables: Array<Item>
+  availables: Array<Item>,
+  searchResultMessage: string
 }
 
 export type State = {

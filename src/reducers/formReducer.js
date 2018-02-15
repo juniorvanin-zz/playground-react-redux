@@ -1,4 +1,5 @@
 // @flow
+
 import type { FormState } from './../types/state'
 import type { FormActions } from './../types/actions'
 
