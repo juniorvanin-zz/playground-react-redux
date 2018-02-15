@@ -5,21 +5,21 @@ import { formatMoney } from 'accounting'
 
 import type { Item } from './../../../types/domain'
 
-const handleOnClick = evt => {
-  const shoppingDetails = document.getElementById("shopping-cart-details")
+const handleOnClick = () => {
+  const shoppingDetails = document.getElementById('shopping-cart-details')
 
-  if(shoppingDetails) {
-    if (shoppingDetails.style.display === "none") {
-       shoppingDetails.style.display = "block";
+  if (shoppingDetails) {
+    if (shoppingDetails.style.display === 'none') {
+      shoppingDetails.style.display = 'block'
     } else {
-       shoppingDetails.style.display = "none";
+      shoppingDetails.style.display = 'none'
     }
   }
 }
 
 const ShoppingCartResume = ({ items }: Props) => (
   <div className="shopping-cart-resume">
-    <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick}/>
+    <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick} />
     <div id="shopping-cart-details">
       {
         items.length === 0 ? <p className="empty-shopping-cart">Your shopping cart is empty :(</p> : buildShoppingCartDetails(items)
@@ -34,19 +34,20 @@ const buildShoppingCartDetails = (items: Array<Item>) => (
     <ul>
       {
         items.map(item => (
-          <li key={ item.id }>
+          <li key={item.id}>
             <p className="title"> { item.title } </p>
             <p className="price"> { formatMoney(item.price) } </p>
           </li>
         ))
       }
     </ul>
-    <hr/>
+    <hr />
     <p className="total">Total: { formatMoney(getTotal(items)) } </p>
   </div>
 )
 
-const getTotal = (items: Array<Item>): number => items.map(item => item.price).reduce((a, b) => a + b, 0)
+const getTotal = (items: Array<Item>): number =>
+  items.map(item => item.price).reduce((a, b) => a + b, 0)
 
 type Props = {
   items: Array<Item>

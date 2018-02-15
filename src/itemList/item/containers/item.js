@@ -1,11 +1,11 @@
 // @flow
 
-import Item from '../components/item'
 import { connect } from 'react-redux'
+import Item from '../components/item'
 import type { State } from './../../../types/state'
 
 const mapStateToProps = (state: State) => ({
-  itemsAddedToCart: state.form.cart.itemsAdded
+  itemsAddedToCart: state.form.cart.itemsAdded,
 })
 
 const connector = connect(mapStateToProps)

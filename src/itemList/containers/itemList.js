@@ -1,7 +1,7 @@
 // @flow
 
-import ItemList from '../components/itemList'
 import { connect } from 'react-redux'
+import ItemList from '../components/itemList'
 import type { State } from './../../types/state'
 
 const mapStateToProps = (state: State) => state
