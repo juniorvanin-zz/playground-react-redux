@@ -1,18 +1,23 @@
+// @flow
+
 import React from 'react'
 import { formatMoney } from 'accounting'
 
-const handleOnClick = evt => {
+import type { Item } from './../../../types/domain'
 
+const handleOnClick = evt => {
   const shoppingDetails = document.getElementById("shopping-cart-details")
 
-  if (shoppingDetails.style.display === "none") {
-     shoppingDetails.style.display = "block";
-  } else {
-     shoppingDetails.style.display = "none";
+  if(shoppingDetails) {
+    if (shoppingDetails.style.display === "none") {
+       shoppingDetails.style.display = "block";
+    } else {
+       shoppingDetails.style.display = "none";
+    }
   }
 }
 
-const ShoppingCartResume = ({ items }) => (
+const ShoppingCartResume = ({ items }: Props) => (
   <div className="shopping-cart-resume">
     <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick}/>
     <div id="shopping-cart-details">
@@ -24,7 +29,7 @@ const ShoppingCartResume = ({ items }) => (
   </div>
 )
 
-const buildShoppingCartDetails = items => (
+const buildShoppingCartDetails = (items: Array<Item>) => (
   <div>
     <ul>
       {
@@ -41,6 +46,10 @@ const buildShoppingCartDetails = items => (
   </div>
 )
 
-const getTotal = items => items.map(item => item.price).reduce((a, b) => a + b, 0)
+const getTotal = (items: Array<Item>): number => items.map(item => item.price).reduce((a, b) => a + b, 0)
+
+type Props = {
+  items: Array<Item>
+}
 
 export default ShoppingCartResume

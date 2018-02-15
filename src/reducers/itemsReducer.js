@@ -1,3 +1,8 @@
+// @flow
+import type { ItemsState } from './../types/state'
+import type { ItemsActions } from './../types/actions'
+
+
 const initState = {
     searchedItems: [],
     availables: [
@@ -16,8 +21,7 @@ const initState = {
     ]
 }
 
-const itemsReducer = (state = initState, action) => {
-
+const itemsReducer = (state: ItemsState = initState, action: ItemsActions) => {
   switch (action.type) {
     case "SEARCH_ITEM_BY_WORD":
     {
@@ -34,7 +38,7 @@ const itemsReducer = (state = initState, action) => {
   }
 }
 
-const buildSearchMessage = numberOfItems => {
+const buildSearchMessage = (numberOfItems: number): string => {
   if(numberOfItems === 1) {
     return "Only one result was found."
   } else if (numberOfItems > 1) {

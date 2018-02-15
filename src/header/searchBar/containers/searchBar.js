@@ -1,11 +1,14 @@
+// @flow
+
 import SearchBar from '../components/searchBar'
 import { connect } from 'react-redux'
 import { searchItemsByWord, updateSearchInput } from '../../../actions'
+import type { State } from './../../../types/state'
 
-const mapStateToProps = (state) => {
+
+const mapStateToProps = (state: State) => {
   return {
-    searchInput: state.form.searchedItem,
-    searchResultMessage: state.items.searchResultMessage
+    searchInput: state.form.searchedItem
   }
 }
 

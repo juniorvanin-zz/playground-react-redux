@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 
 const handleSubmit = (searchItemsByWord) => (evt) => {
@@ -10,7 +12,7 @@ const handleOnChange = (updateSearchInput) => (evt) => {
     updateSearchInput(evt.target.value)
 }
 
-const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput }) => (
+const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput }: Props) => (
     <form className="search-bar" onSubmit={ handleSubmit(() => searchItemsByWord(searchInput)) } >
       <input
         type="text"
@@ -20,7 +22,12 @@ const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput }) => (
         onChange={handleOnChange(updateSearchInput)}
         value={ searchInput } />
     </form>
-    // <span> { searchResultMessage } </span>
 )
+
+type Props = {
+  searchItemsByWord: Function,
+  updateSearchInput: Function,
+  searchInput: string
+}
 
 export default SearchBar

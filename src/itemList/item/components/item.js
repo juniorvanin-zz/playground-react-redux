@@ -1,8 +1,11 @@
+// @flow
+
 import React from 'react'
 import AddToShoppingCartButton from './../addToShoppingCartButton/containers/addToShoppingCartButton'
 import RemoveFromShoppingCartButton from './../removeFromShoppingCartButton/containers/removeFromShoppingCartButton'
+import type { Item as ItemType } from './../../../types/domain'
 
-const Item = ({ item, itemsAddedToCart }) => {
+const Item = ({ item, itemsAddedToCart }: Props) => {
   return (
     <li>
       <p className="price">${ item.price }</p>
@@ -14,6 +17,11 @@ const Item = ({ item, itemsAddedToCart }) => {
   )
 }
 
-const isProductAddedToShoppingCart = (itemsAddedToCart, id) => itemsAddedToCart.find(item => item === id)
+const isProductAddedToShoppingCart = (itemsAddedToCart: Array<ItemType>, id: number): boolean => itemsAddedToCart.includes(id)
+
+type Props = {
+  item: ItemType,
+  itemsAddedToCart: Array<ItemType>
+}
 
 export default Item
