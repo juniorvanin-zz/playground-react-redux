@@ -12,6 +12,9 @@
 # babel
 /lib
 
+#webpack
+/dist
+
 # misc
 .DS_Store
 .env.local

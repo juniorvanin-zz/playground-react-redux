@@ -7,12 +7,11 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
-    "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "uuid": "^3.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack-dev-server --open",
     "build": "webpack",
     "prepublish": "npm run build",
     "flow": "flow",
@@ -39,6 +38,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "react-svg-loader": "^2.1.0",
-    "webpack": "^3.11.0"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
