@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { formatMoney } from 'accounting'
-
 import type { Item } from './../../../types/domain'
+import Image from '../../../resources/shopping-cart.svg'
 
 const handleOnClick = () => {
   const shoppingDetails = document.getElementById('shopping-cart-details')
@@ -19,8 +19,10 @@ const handleOnClick = () => {
 
 const ShoppingCartResume = ({ items }: Props) => (
   <div className="shopping-cart-resume">
-    <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick} />
-    <div id="shopping-cart-details">
+    <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick}>
+      <Image width={50} height={50}/>
+    </button>
+    <div id="shopping-cart-details" style={{display: "none"}}>
       {
         items.length === 0 ? <p className="empty-shopping-cart">Your shopping cart is empty :(</p> : buildShoppingCartDetails(items)
       }
