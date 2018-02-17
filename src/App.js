@@ -7,10 +7,8 @@ import './App.css'
 const App = () => (
   <div>
     <Header />
-    <div className="container">
-      <div className="item-list">
-        <ItemList />
-      </div>
+    <div className="item-list">
+      <ItemList />
     </div>
   </div>
 )

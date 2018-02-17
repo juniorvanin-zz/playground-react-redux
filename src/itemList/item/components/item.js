@@ -9,16 +9,18 @@ import Image from '../../../resources/shopping-cart.svg'
 
 
 const Item = ({ item, itemsAddedToCart }: Props) => (
-  <li>
-    <p className="price">${ item.price }</p>
-    <span>{ item.title }</span>
-    <Image width="100px" height="100px"/>
-    <p> { item.description }</p>
-    {
-      isProductAddedToShoppingCart(itemsAddedToCart, item.id)
-      ? <RemoveFromShoppingCartButton item={item} />
-      : <AddToShoppingCartButton item={item} />
-    }
+  <li className="col-3">
+    <div className="item">
+      <p className="price">${ item.price }</p>
+      <span>{ item.title }</span>
+      <Image width="140px" height="140px"/>
+      <p> { item.description }</p>
+      {
+        isProductAddedToShoppingCart(itemsAddedToCart, item.id)
+        ? <RemoveFromShoppingCartButton item={item} />
+        : <AddToShoppingCartButton item={item} />
+      }
+    </div>
   </li>
 )
 
