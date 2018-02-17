@@ -8,20 +8,20 @@ import type {
 
 export const searchItemsByWord = (word: string): SearchItemsByWord => ({
   type: 'SEARCH_ITEM_BY_WORD',
-  word,
+  word
 })
 
 export const updateSearchInput = (word: string): UpdateSearchInputAction => ({
   type: 'UPDATE_SEARCH_INPUT',
-  word,
+  word
 })
 
 export const addToCart = (id: number): AddItemToCartAction => ({
   type: 'ADD_ITEM_TO_CART',
-  id,
+  id
 })
 
 export const removeFromCart = (id: number): RemoveItemFromCartAction => ({
   type: 'REMOVE_ITEM_FROM_CART',
-  id,
+  id
 })

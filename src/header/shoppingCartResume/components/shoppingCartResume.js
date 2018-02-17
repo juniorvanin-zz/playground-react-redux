@@ -20,9 +20,9 @@ const handleOnClick = () => {
 const ShoppingCartResume = ({ items }: Props) => (
   <div className="shopping-cart-resume">
     <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick}>
-      <Image width={50} height={50}/>
+      <Image width={50} height={50} />
     </button>
-    <div id="shopping-cart-details" style={{display: "none"}}>
+    <div id="shopping-cart-details" style={{ display: 'none' }}>
       {
         items.length === 0 ? <p className="empty-shopping-cart">Your shopping cart is empty :(</p> : buildShoppingCartDetails(items)
       }

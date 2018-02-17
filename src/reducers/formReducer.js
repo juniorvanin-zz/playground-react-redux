@@ -6,8 +6,8 @@ import type { FormActions } from './../types/actions'
 const initState: FormState = {
   searchedItem: '',
   cart: {
-    itemsAdded: [],
-  },
+    itemsAdded: []
+  }
 }
 
 const formReducer = (state: FormState = initState, action: FormActions) => {
@@ -16,20 +16,20 @@ const formReducer = (state: FormState = initState, action: FormActions) => {
       return {
         ...state,
         cart: {
-          itemsAdded: [...state.cart.itemsAdded, action.id],
-        },
+          itemsAdded: [...state.cart.itemsAdded, action.id]
+        }
       }
     case 'REMOVE_ITEM_FROM_CART':
       return {
         ...state,
         cart: {
-          itemsAdded: [...state.cart.itemsAdded.filter(id => id !== action.id)],
-        },
+          itemsAdded: [...state.cart.itemsAdded.filter(id => id !== action.id)]
+        }
       }
     case 'UPDATE_SEARCH_INPUT':
       return {
         ...state,
-        searchedItem: action.word,
+        searchedItem: action.word
       }
     default:
       return state

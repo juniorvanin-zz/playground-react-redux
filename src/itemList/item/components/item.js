@@ -5,15 +5,12 @@ import AddToShoppingCartButton from './../addToShoppingCartButton/containers/add
 import RemoveFromShoppingCartButton from './../removeFromShoppingCartButton/containers/removeFromShoppingCartButton'
 import type { Item as ItemType } from './../../../types/domain'
 
-import Image from '../../../resources/shopping-cart.svg'
-
-
 const Item = ({ item, itemsAddedToCart }: Props) => (
   <li className="col-3">
     <div className="item">
       <p className="price">${ item.price }</p>
       <span>{ item.title }</span>
-      <Image width="140px" height="140px"/>
+      <img src={`../../../assets/products/${item.image}.svg`} alt="product thumbnail" />
       <p> { item.description }</p>
       {
         isProductAddedToShoppingCart(itemsAddedToCart, item.id)

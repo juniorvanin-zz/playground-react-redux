@@ -10,7 +10,7 @@ const mapStateToProps = (state: State) => state
 const mapDispatchToProps = dispatch => ({
   removeFromCart: (id) => {
     dispatch(removeFromCart(id))
-  },
+  }
 })
 
 const connector = connect(mapStateToProps, mapDispatchToProps)

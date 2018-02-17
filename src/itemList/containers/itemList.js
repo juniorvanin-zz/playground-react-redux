@@ -9,7 +9,7 @@ const mapStateToProps = (state: State) => (
     items: state.items.searchedItems.length !== 0
       ? state.items.searchedItems
       : state.items.availables,
-    searchResultMessage: state.items.searchResultMessage,
+    searchResultMessage: state.items.searchResultMessage
   }
 )
 

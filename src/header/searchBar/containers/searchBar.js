@@ -7,7 +7,7 @@ import type { State } from './../../../types/state'
 
 
 const mapStateToProps = (state: State) => ({
-  searchInput: state.form.searchedItem,
+  searchInput: state.form.searchedItem
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => ({
   },
   updateSearchInput: (word) => {
     dispatch(updateSearchInput(word))
-  },
+  }
 })
 
 const connector = connect(mapStateToProps, mapDispatchToProps)

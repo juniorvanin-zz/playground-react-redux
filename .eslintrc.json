@@ -8,7 +8,8 @@
        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
        "semi": ["warn", "never"],
        "no-use-before-define": "off",
-       "no-underscore-dangle": "off"
+       "no-underscore-dangle": "off",
+       "comma-dangle": ["error", "never"]
     },
     "globals": {
       "document": true,
