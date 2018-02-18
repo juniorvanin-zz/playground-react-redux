@@ -7,9 +7,31 @@ body {
 header {
   background-color: #20232a;
   display: flex;
-  flex-direction: row-reverse;
   align-items: flex-end;
-  height: 80px
+  flex-wrap: nowrap;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+  margin: 15px 0px;
+  min-width: 300px;
+}
+
+.logo:focus {
+  border: 0px;
+  outline:0;
+}
+
+.logo span {
+  font-size: 37px;
+  font-weight: 800;
+  color: white;
+  padding-top: 5px;
+  margin-left: 10px;
 }
 
 header form {
@@ -29,7 +51,7 @@ header form {
     background-position: 7px;
     color: white;
     font-weight: 100;
-    margin: 0px 10px 15px 15px
+    margin: 15px 10px;
 }
 
 .search-bar input:focus {
@@ -111,8 +133,9 @@ header form {
 
 .shopping-cart-resume {
   display: flex;
-  order: -1;
   margin-top: 10px;
+  min-width: 120px;
+  justify-content: center;
 }
 
 .shopping-cart-resume-icon {
@@ -146,7 +169,7 @@ header form {
   width: 300px;
   position: absolute;
   margin-top: 55px;
-  margin-left: -200px;
+  margin-left: -100px;
   background-color: #ffffff;
   border: 1px solid #f5f5f5;
   -webkit-box-shadow: -5px 5px 4px -5px rgba(0,0,0,0.62);
@@ -178,8 +201,8 @@ header form {
 
 #shopping-cart-details hr {
   margin-right: 20px;
-  border: 0;
-  height: 1;
+  border: 0px;
+  height: 1px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -219,13 +242,36 @@ header form {
 .col-12 {width: 100%;}
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 0px) and (max-width: 560px) {
+@media only screen and (min-width : 414px) and (max-width: 736px) {
   [class*="col-"] {
       width: 100%;
   }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  header .logo {
+    width: 100%;
+  }
+
+  header form {
+    width: 85%;
+  }
+
+  header .shopping-cart-resume {
+    width: 15%;
+    min-width: 60px;
+  }
+
+  header .shopping-cart-resume-quantity {
+    display: none;
+  }
 }
+
+
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width : 560px) and (max-width : 1100px) {
+@media only screen and (min-width : 736px) and (max-width : 1024px) {
   [class*="col-"] {
       width: 50%;
   }

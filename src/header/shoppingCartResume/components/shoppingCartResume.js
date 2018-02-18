@@ -22,12 +22,16 @@ const ShoppingCartResume = ({ items }: Props) => (
   <div className="shopping-cart-resume">
     <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick}>
       {
-        items.length === 0 ? <ShoppingCartEmpty width={50} height={50} /> : <ShoppingCartFull width={50} height={50} />
+        items.length === 0
+        ? <ShoppingCartEmpty width={50} height={50} />
+        : <ShoppingCartFull width={50} height={50} />
       }
     </button>
     <div id="shopping-cart-details" style={{ display: 'none' }}>
       {
-        items.length === 0 ? <p className="empty-shopping-cart">Your shopping cart is empty :(</p> : buildShoppingCartDetails(items)
+        items.length === 0
+        ? <p className="empty-shopping-cart">Your shopping cart is empty { ':(' } </p>
+        : buildShoppingCartDetails(items)
       }
     </div>
     <p className="shopping-cart-resume-quantity">{ items.length }</p>
