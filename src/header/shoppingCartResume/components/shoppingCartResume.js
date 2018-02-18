@@ -3,7 +3,8 @@
 import React from 'react'
 import { formatMoney } from 'accounting'
 import type { Item } from './../../../types/domain'
-import Image from '../../../resources/shopping-cart.svg'
+import ShoppingCartEmpty from '../../../resources/shopping-cart-empty.svg'
+import ShoppingCartFull from '../../../resources/shopping-cart-full.svg'
 
 const handleOnClick = () => {
   const shoppingDetails = document.getElementById('shopping-cart-details')
@@ -20,7 +21,9 @@ const handleOnClick = () => {
 const ShoppingCartResume = ({ items }: Props) => (
   <div className="shopping-cart-resume">
     <button className="shopping-cart-resume-icon" type="submit" onClick={handleOnClick}>
-      <Image width={50} height={50} />
+      {
+        items.length === 0 ? <ShoppingCartEmpty width={50} height={50} /> : <ShoppingCartFull width={50} height={50} />
+      }
     </button>
     <div id="shopping-cart-details" style={{ display: 'none' }}>
       {
