@@ -68,7 +68,7 @@ const initState = {
       id: 17, title: 'Quis autem vel eum iure', description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.', price: 12.75, image: 'hoodie-1'
     },
     {
-      id: 12, title: 'At vero eos et accusamus et', description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.', price: 11.00, image: 'bag-1'
+      id: 18, title: 'At vero eos et accusamus et', description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.', price: 11.00, image: 'bag-1'
     },
     {
       id: 19, title: 'Nam libero tempore, cum soluta', description: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.', price: 13.00, image: 'scarf-1'
