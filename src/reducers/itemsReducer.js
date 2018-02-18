@@ -3,16 +3,6 @@
 import type { ItemsState } from './../types/state'
 import type { ItemsActions } from './../types/actions'
 
-const buildSearchMessage = (numberOfItems: number): string => {
-  if (numberOfItems === 1) {
-    return 'Only one result was found.'
-  } else if (numberOfItems > 1) {
-    return `${numberOfItems} results were found.`
-  }
-
-  return 'No results found for the given search.'
-}
-
 const initState = {
   searchedItems: [],
   availables: [
@@ -100,8 +90,7 @@ const itemsReducer = (state: ItemsState = initState, action: ItemsActions) => {
 
       return {
         ...state,
-        searchedItems,
-        searchResultMessage: buildSearchMessage(searchedItems.length)
+        searchedItems
       }
     }
     default:
