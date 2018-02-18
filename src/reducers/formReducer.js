@@ -26,11 +26,6 @@ const formReducer = (state: FormState = initState, action: FormActions) => {
           itemsAdded: [...state.cart.itemsAdded.filter(id => id !== action.id)]
         }
       }
-    case 'UPDATE_SEARCH_INPUT':
-      return {
-        ...state,
-        searchedItem: action.word
-      }
     default:
       return state
   }

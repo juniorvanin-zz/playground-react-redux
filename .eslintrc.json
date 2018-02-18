@@ -9,7 +9,10 @@
        "semi": ["warn", "never"],
        "no-use-before-define": "off",
        "no-underscore-dangle": "off",
-       "comma-dangle": ["error", "never"]
+       "comma-dangle": ["error", "never"],
+       "react/forbid-prop-types": "off",
+       "react/require-default-props": "off",
+       "react/prop-types": "off"
     },
     "globals": {
       "document": true,

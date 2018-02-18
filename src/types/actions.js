@@ -10,12 +10,7 @@ export type RemoveItemFromCartAction = {
   id: number
 }
 
-export type UpdateSearchInputAction = {
-  type: 'UPDATE_SEARCH_INPUT',
-  word: string
-}
-
-export type FormActions = AddItemToCartAction | RemoveItemFromCartAction | UpdateSearchInputAction
+export type FormActions = AddItemToCartAction | RemoveItemFromCartAction
 
 export type SearchItemsByWord = {
   type: 'SEARCH_ITEM_BY_WORD',

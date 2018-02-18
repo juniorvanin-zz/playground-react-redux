@@ -1,34 +1,36 @@
-// @flow
-
 import React from 'react'
 
-const handleSubmit = searchItemsByWord => (evt) => {
-  evt.preventDefault()
-  searchItemsByWord()
-}
+class SearchBar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { value: '' }
+  }
 
-const handleOnChange = updateSearchInput => (evt) => {
-  evt.preventDefault()
-  updateSearchInput(evt.target.value)
-}
+  handleChange = (event) => {
+    this.setState({ value: event.target.value })
+  }
 
-const SearchBar = ({ searchItemsByWord, updateSearchInput, searchInput }: Props) => (
-  <form className="search-bar" onSubmit={handleSubmit(() => searchItemsByWord(searchInput))} >
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="What are you looking for?"
-      autoComplete="off"
-      onChange={handleOnChange(updateSearchInput)}
-      value={searchInput}
-    />
-  </form>
-)
+ handleSubmit = (event) => {
+   const searchUrl = `/search?value=${encodeURI(this.state.value)}`
+   this.props.searchItemsByWord(this.state.value)
+   this.props.history.push(searchUrl)
+   event.preventDefault()
+ }
 
-type Props = {
-  searchItemsByWord: Function,
-  updateSearchInput: Function,
-  searchInput: string
+ render() {
+   return (
+     <form className="search-bar" onSubmit={this.handleSubmit} >
+       <input
+         type="text"
+         id="searchInput"
+         placeholder="What are you looking for?"
+         autoComplete="off"
+         onChange={this.handleChange}
+         value={this.state.value}
+       />
+     </form>
+   )
+ }
 }
 
 export default SearchBar

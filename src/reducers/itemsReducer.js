@@ -87,7 +87,6 @@ const itemsReducer = (state: ItemsState = initState, action: ItemsActions) => {
     case 'SEARCH_ITEM_BY_WORD':
     {
       const searchedItems = state.availables.filter(item => item.title.includes(action.word))
-
       return {
         ...state,
         searchedItems
