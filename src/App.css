@@ -178,7 +178,10 @@ header form {
 }
 
 #shopping-cart-details ul {
-  padding-left: 20px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
 }
 
 #shopping-cart-details li {
@@ -186,12 +189,10 @@ header form {
 }
 
 #shopping-cart-details li .title {
-  margin: 20px 20px 0px 0px;
-  list-style-type: none;
+  margin-bottom: 0px;
 }
 
 #shopping-cart-details li .price {
-  list-style-type: none;
   font-size: 12px;
 }
 
@@ -200,7 +201,6 @@ header form {
 }
 
 #shopping-cart-details hr {
-  margin-right: 20px;
   border: 0px;
   height: 1px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -210,6 +210,21 @@ header form {
 #shopping-cart-details .total {
   text-align: right;
   margin-right: 20px;
+}
+
+#shopping-cart-details button {
+  border: 1px solid transparent;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0275d8;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#shopping-cart-details button span {
+  padding: 10px
 }
 
 .item-list {

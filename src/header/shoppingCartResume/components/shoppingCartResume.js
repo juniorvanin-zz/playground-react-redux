@@ -3,6 +3,8 @@
 import React from 'react'
 import { formatMoney } from 'accounting'
 import type { Item } from './../../../types/domain'
+import ProccedToCheckoutButton from './../proccedToCheckoutButton/components/proccedToCheckoutButton'
+
 import ShoppingCartEmpty from '../../../resources/shopping-cart-empty.svg'
 import ShoppingCartFull from '../../../resources/shopping-cart-full.svg'
 
@@ -52,8 +54,11 @@ const buildShoppingCartDetails = (items: Array<Item>) => (
     </ul>
     <hr />
     <p className="total">Total: { formatMoney(getTotal(items)) } </p>
+    <ProccedToCheckoutButton />
   </div>
 )
+
+
 
 const getTotal = (items: Array<Item>): number =>
   items.map(item => item.price).reduce((a, b) => a + b, 0)
