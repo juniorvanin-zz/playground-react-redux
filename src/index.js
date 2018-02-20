@@ -16,6 +16,8 @@ import CheckoutPage from './checkoutPage/components/checkoutPage'
 
 const middleware = routerMiddleware(history)
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
 const store = createStore(
   combineReducers({
     form: formReducer,
@@ -23,9 +25,8 @@ const store = createStore(
     router: routerReducer,
     shoppingCart: shoppingCartReducer
   }),
-  compose(
-    applyMiddleware(middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeEnhancers(
+    applyMiddleware(middleware)
   )
 )
 
