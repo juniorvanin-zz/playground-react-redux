@@ -59,7 +59,6 @@ const buildShoppingCartDetails = (items: Array<Item>) => (
 )
 
 
-
 const getTotal = (items: Array<Item>): number =>
   items.map(item => item.price).reduce((a, b) => a + b, 0)
 

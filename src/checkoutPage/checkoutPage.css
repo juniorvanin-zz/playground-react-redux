@@ -1,0 +1,50 @@
+
+.checkoutPage h1 {
+  margin: 10px;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.checkoutPage form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.checkoutPage form button {
+  border: 1px solid transparent;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0275d8;
+  padding: 10px;
+  margin: 20px 10px 30px 10px;
+}
+
+form .buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+form input {
+  padding: 10px;
+  font-size: 24px;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  margin-top: 5px;
+}
+
+form small {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}

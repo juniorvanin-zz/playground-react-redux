@@ -2,13 +2,9 @@
 
 import type { Item } from './../types/domain'
 
-export type Cart = {
-  itemsAdded: Array<string>
-}
-
-export type FormState = {
+export type ShoppingCartState = {
   searchedItem: string,
-  cart: Cart
+  itemsAdded: Array<string>
 }
 
 export type ItemsState = {
@@ -18,6 +14,6 @@ export type ItemsState = {
 }
 
 export type State = {
-  form: FormState,
+  shoppingCart: ShoppingCartState,
   items: ItemsState
 }

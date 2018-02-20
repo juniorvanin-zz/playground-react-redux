@@ -1,14 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
+import { reducer as formReducer } from 'redux-form'
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
+
+import shoppingCartReducer from './reducers/shoppingCartReducer'
+import itemsReducer from './reducers/itemsReducer'
+
 import MainPage from './mainPage/containers/mainPage'
 import SearchResultsPage from './searchResultsPage/containers/searchResultsPage'
-import formReducer from './reducers/formReducer'
-import itemsReducer from './reducers/itemsReducer'
+import CheckoutPage from './checkoutPage/components/checkoutPage'
 
 const middleware = routerMiddleware(history)
 
@@ -16,7 +20,8 @@ const store = createStore(
   combineReducers({
     form: formReducer,
     items: itemsReducer,
-    router: routerReducer
+    router: routerReducer,
+    shoppingCart: shoppingCartReducer
   }),
   compose(
     applyMiddleware(middleware),
@@ -32,6 +37,7 @@ render(
       <div>
         <Route exact path="/" component={MainPage} />
         <Route exact path="/search" component={SearchResultsPage} />
+        <Route exact path="/checkout" component={CheckoutPage} />
       </div>
     </ConnectedRouter>
   </Provider>,
