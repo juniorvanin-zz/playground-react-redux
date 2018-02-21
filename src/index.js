@@ -25,9 +25,7 @@ const store = createStore(
     router: routerReducer,
     shoppingCart: shoppingCartReducer
   }),
-  composeEnhancers(
-    applyMiddleware(middleware)
-  )
+  composeEnhancers(applyMiddleware(middleware))
 )
 
 const history = createHistory()

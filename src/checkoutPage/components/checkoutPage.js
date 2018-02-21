@@ -7,8 +7,8 @@ import './../../App.css'
 import './../checkoutPage.css'
 
 let CheckoutPage = ({ history }) => (
-  <div>
-    <Header />
+  <React.Fragment>
+    <Header />,
     <section className="checkoutPage">
       <h1>Please enter your personal information</h1>
       <section className="addressInformation">
@@ -49,7 +49,7 @@ let CheckoutPage = ({ history }) => (
         </form>
       </section>
     </section>
-  </div>
+  </React.Fragment>
 )
 
 CheckoutPage = reduxForm({

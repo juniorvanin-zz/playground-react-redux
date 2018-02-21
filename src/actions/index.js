@@ -3,7 +3,8 @@
 import type {
   SearchItemsByWord,
   AddItemToCartAction,
-  RemoveItemFromCartAction } from './../types/actions'
+  RemoveItemFromCartAction
+} from './../types/actions'
 
 export const searchItemsByWord = (word: string): SearchItemsByWord => ({
   type: 'SEARCH_ITEM_BY_WORD',

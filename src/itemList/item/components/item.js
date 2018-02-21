@@ -3,13 +3,16 @@
 import React from 'react'
 import AddToShoppingCartButton from './../addToShoppingCartButton/containers/addToShoppingCartButton'
 import RemoveFromShoppingCartButton from './../removeFromShoppingCartButton/containers/removeFromShoppingCartButton'
+
 import type { Item as ItemType } from './../../../types/domain'
+
+import './../item.css'
 
 const Item = ({ item, itemsAddedToCart }: Props) => (
   <li className="col-3">
-    <div className="item">
-      <p className="price">${ item.price }</p>
-      <span>{ item.title }</span>
+    <section className="item">
+      <span>$ { item.price }</span>
+      <h2>{ item.title }</h2>
       <img src={`../../../assets/products/${item.image}.svg`} alt="product thumbnail" />
       <p> { item.description }</p>
       {
@@ -17,7 +20,7 @@ const Item = ({ item, itemsAddedToCart }: Props) => (
         ? <RemoveFromShoppingCartButton item={item} />
         : <AddToShoppingCartButton item={item} />
       }
-    </div>
+    </section>
   </li>
 )
 

@@ -83,54 +83,6 @@ header form {
   flex-direction: column;
 }
 
-.shopping-card li span {
-  font-size: 24px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  padding: 0px 25px;
-  text-align: center;
-  color: #2e3b4e;
-  height: 55px;
-  align-self: center;
-}
-
-.shopping-card li img {
-  height: 140px;
-  width: 140px;
-}
-
-.shopping-card li p {
-  font-size: 14px;
-  text-align: center;
-  margin: 20px 0px;
-  padding: 0px 25px;
-}
-
-.shopping-card li .price {
-  align-self: flex-end;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px;
-  background-color: #90AFC5;
-  margin-top: -10px;
-}
-
-.shopping-card button {
-  padding: .5rem 1rem;
-  font-size: 1rem;
-  border: 1px solid transparent;
-  font-size: 1rem;
-  color: #fff;
-}
-
-.shopping-card .add-to-cart {
-  background-color: #0275d8;
-}
-
-.shopping-card .remove-from-cart {
-  background-color: #d9534f;
-}
-
 .shopping-cart-resume {
   display: flex;
   margin-top: 10px;
