@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom'
 import type { History } from 'history'
 
 import Header from './../../header/components/header'
+import TextInput from './../../forms/textInput/components/textInput'
 
 import './../../App.css'
 import './../checkoutPage.css'
@@ -18,39 +19,25 @@ let CheckoutPage = ({ history }: History) => (
       <section className="addressInformation">
         <form onSubmit={() => history.push('/')}>
           <div className="col-12">
-            <label htmlFor="fullName">Full name
-              <Field name="fullName" component="input" type="text" />
-            </label>
+            <TextInput name="fullName" label="Full name"/>
           </div>
           <div className="col-6">
-            <label htmlFor="street">Street and Number
-              <Field name="street" component="input" type="text" />
-            </label>
+            <TextInput name="street" label="Street and Number"/>
           </div>
           <div className="col-6">
-            <label htmlFor="neighborhood">Neighborhood
-              <Field name="neighborhood" component="input" />
-            </label>
+            <TextInput name="neighborhood" label="Neighborhood"/>
           </div>
           <div className="col-6">
-            <label htmlFor="city">City
-              <Field name="city" component="input" type="text" />
-            </label>
+            <TextInput name="city" label="City"/>
           </div>
           <div className="col-6">
-            <label htmlFor="state">State/Province/Region
-              <Field name="state" component="input" />
-            </label>
+            <TextInput name="state" label="State/Province/Region"/>
           </div>
           <div className="col-6">
-            <label htmlFor="zipcode">Zip/Postal Code
-              <Field name="zipcode" component="input" />
-            </label>
+            <TextInput name="zipcode" label="Zip/Postal Code"/>
           </div>
           <div className="col-6">
-            <label htmlFor="country">Country
-              <Field name="country" component="input" />
-            </label>
+            <TextInput name="country" label="Country"/>
           </div>
           <div className="buttonWrapper">
             <button type="submit">Place your order</button>
