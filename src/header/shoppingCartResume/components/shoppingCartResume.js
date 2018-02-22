@@ -33,7 +33,7 @@ const ShoppingCartResume = ({ items }: Props) => (
   </div>
 )
 
-type Props = {
+export type Props = {
   items: Array<Item>
 }
 

@@ -4,7 +4,7 @@ import type { Item } from './../types/domain'
 
 export type ShoppingCartState = {
   searchedItem: string,
-  itemsAdded: Array<string>
+  itemsAdded: Array<number>
 }
 
 export type ItemsState = {

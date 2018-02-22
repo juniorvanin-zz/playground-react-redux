@@ -24,13 +24,13 @@ const Item = ({ item, itemsAddedToCart }: Props) => (
   </li>
 )
 
-const isProductAddedToShoppingCart = (itemsAddedToCart: Array<ItemType>, id: number): boolean => (
+const isProductAddedToShoppingCart = (itemsAddedToCart: Array<number>, id: number): boolean => (
   itemsAddedToCart.includes(id)
 )
 
 type Props = {
   item: ItemType,
-  itemsAddedToCart: Array<ItemType>
+  itemsAddedToCart: Array<number>
 }
 
 export default Item

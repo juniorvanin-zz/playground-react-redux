@@ -1,10 +1,10 @@
 // @flow
 
-import { connect } from 'react-redux'
-import MainPage from '../components/mainPage'
+import { connect, type MapStateToProps } from 'react-redux'
+import MainPage, { type Props } from '../components/mainPage'
 import type { State } from './../../types/state'
 
-const mapStateToProps = (state: State) => (
+const mapStateToProps: MapStateToProps<State, {}, Props> = state => (
   {
     items: state.items.availables
   }
