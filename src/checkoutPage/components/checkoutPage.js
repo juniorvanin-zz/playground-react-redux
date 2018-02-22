@@ -14,17 +14,17 @@ let CheckoutPage = ({ history }: History) => (
   <div>
     <Header />
     <section className="checkoutPage">
-      <h1>Please enter your personal information</h1>
+      <h2>Please enter your personal information</h2>
       <section className="addressInformation">
         <form onSubmit={() => history.push('/')}>
-          <div className="col-6">
-            <label htmlFor="street">Street and Number
-              <Field name="street" component="input" type="text" />
+          <div className="col-12">
+            <label htmlFor="fullName">Full name
+              <Field name="fullName" component="input" type="text" />
             </label>
           </div>
           <div className="col-6">
-            <label htmlFor="number">Number
-              <Field name="number" component="input" type="text" />
+            <label htmlFor="street">Street and Number
+              <Field name="street" component="input" type="text" />
             </label>
           </div>
           <div className="col-6">
@@ -33,12 +33,17 @@ let CheckoutPage = ({ history }: History) => (
             </label>
           </div>
           <div className="col-6">
-            <label htmlFor="complement">Complement
-              <Field name="complement" component="input" />
+            <label htmlFor="city">City
+              <Field name="city" component="input" type="text" />
             </label>
           </div>
           <div className="col-6">
-            <label htmlFor="zipcode">Zip Code
+            <label htmlFor="state">State/Province/Region
+              <Field name="state" component="input" />
+            </label>
+          </div>
+          <div className="col-6">
+            <label htmlFor="zipcode">Zip/Postal Code
               <Field name="zipcode" component="input" />
             </label>
           </div>
