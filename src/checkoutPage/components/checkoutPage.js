@@ -1,16 +1,13 @@
-// @flow
-
 import React from 'react'
 import { reduxForm } from 'redux-form'
 import { withRouter } from 'react-router-dom'
-import type { History } from 'history'
 
 import TextInput from './../../forms/textInput/components/textInput'
 
 import './../../App.css'
 import './../checkoutPage.css'
 
-let CheckoutPage = ({ history }: History) => (
+let CheckoutPage = ({ history }) => (
   <section className="checkoutPage">
     <h2>Please enter your personal information</h2>
     <section className="addressInformation">

@@ -1,19 +1,7 @@
-// @flow
-
-import { connect, type MapStateToProps } from 'react-redux'
+import { connect } from 'react-redux'
 import Item from '../components/item'
-import type { State } from './../../../types/state'
-import type { Item as ItemType } from './../../../types/domain'
 
-type Props = {
-  itemsAddedToCart: Array<number>
-}
-
-type OwnProps = {
-  item: ItemType
-}
-
-const mapStateToProps: MapStateToProps<State, OwnProps, Props> = state => ({
+const mapStateToProps = state => ({
   itemsAddedToCart: state.shoppingCart.itemsAdded
 })
 

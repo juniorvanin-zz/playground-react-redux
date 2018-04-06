@@ -1,11 +1,8 @@
-// @flow
-
 import { connect } from 'react-redux'
 import RemoveFromShoppingCartButton from '../components/removeFromShoppingCartButton'
 import { removeFromCart } from '../../../../actions'
-import type { State } from './../../../../types/state'
 
-const mapStateToProps = (state: State) => state
+const mapStateToProps = (state) => state
 
 const mapDispatchToProps = dispatch => ({
   removeFromCart: (id) => {

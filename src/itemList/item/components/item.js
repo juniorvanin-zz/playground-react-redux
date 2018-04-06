@@ -1,14 +1,10 @@
-// @flow
-
 import React from 'react'
 import AddToShoppingCartButton from './../addToShoppingCartButton/containers/addToShoppingCartButton'
 import RemoveFromShoppingCartButton from './../removeFromShoppingCartButton/containers/removeFromShoppingCartButton'
 
-import type { Item as ItemType } from './../../../types/domain'
-
 import './../item.css'
 
-const Item = ({ item, itemsAddedToCart }: Props) => (
+const Item = ({ item, itemsAddedToCart }) => (
   <li className="col-3">
     <section className="item">
       <span>$ { item.price }</span>
@@ -24,13 +20,8 @@ const Item = ({ item, itemsAddedToCart }: Props) => (
   </li>
 )
 
-const isProductAddedToShoppingCart = (itemsAddedToCart: Array<number>, id: number): boolean => (
+const isProductAddedToShoppingCart = (itemsAddedToCart, id) => (
   itemsAddedToCart.includes(id)
 )
-
-type Props = {
-  item: ItemType,
-  itemsAddedToCart: Array<number>
-}
 
 export default Item

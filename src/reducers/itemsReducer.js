@@ -1,8 +1,3 @@
-// @flow
-
-import type { ItemsState } from './../types/state'
-import type { ItemsActions } from './../types/actions'
-
 const initState = {
   searchedItems: [],
   availables: [
@@ -82,7 +77,7 @@ const initState = {
   searchResultMessage: ''
 }
 
-const itemsReducer = (state: ItemsState = initState, action: ItemsActions) => {
+const itemsReducer = (state = initState, action) => {
   switch (action.type) {
     case 'SEARCH_ITEM_BY_WORD':
     {

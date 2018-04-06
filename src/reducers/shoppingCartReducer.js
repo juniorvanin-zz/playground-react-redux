@@ -1,14 +1,9 @@
-// @flow
-
-import type { ShoppingCartState } from './../types/state'
-import type { FormActions } from './../types/actions'
-
-const initState: ShoppingCartState = {
+const initState = {
   searchedItem: '',
   itemsAdded: []
 }
 
-const formReducer = (state: ShoppingCartState = initState, action: FormActions) => {
+const formReducer = (state = initState, action) => {
   switch (action.type) {
     case 'ADD_ITEM_TO_CART':
       return {
