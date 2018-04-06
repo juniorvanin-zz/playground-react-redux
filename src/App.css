@@ -17,9 +17,10 @@ body {
    flex-wrap: wrap;
    color: #5f6a7d;
    padding: 0px;
+   list-style: none;
 }
 
-.shopping-card li {
+.shopping-card-cart li {
   height: 460px;
   list-style-type: none;
   display: flex;

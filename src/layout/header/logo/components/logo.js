@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 
-import ShoppingLogo from '../../../resources/gift.svg'
+import ShoppingLogo from '../../../../resources/gift.svg'
 
 const Logo = ({ history }) => (
   <button onClick={() => history.push('/')} className="logo">

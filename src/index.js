@@ -9,10 +9,12 @@ import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-r
 
 import shoppingCartReducer from './reducers/shoppingCartReducer'
 import itemsReducer from './reducers/itemsReducer'
+import applicationReducer from './reducers/applicationReducer'
 
 import MainPage from './mainPage/containers/mainPage'
 import SearchResultsPage from './searchResultsPage/containers/searchResultsPage'
 import CheckoutPage from './checkoutPage/components/checkoutPage'
+import Layout from './layout/containers/layout'
 
 const middleware = routerMiddleware(history)
 
@@ -23,6 +25,7 @@ const store = createStore(
     form: formReducer,
     items: itemsReducer,
     router: routerReducer,
+    application: applicationReducer,
     shoppingCart: shoppingCartReducer
   }),
   composeEnhancers(applyMiddleware(middleware))
@@ -30,13 +33,19 @@ const store = createStore(
 
 const history = createHistory()
 
+const useDefaultLayout = content => (
+  <Layout>
+    { content }
+  </Layout>
+)
+
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
-        <Route exact path="/" component={MainPage} />
-        <Route exact path="/search" component={SearchResultsPage} />
-        <Route exact path="/checkout" component={CheckoutPage} />
+        <Route exact path="/" component={() => useDefaultLayout(<MainPage />)} />
+        <Route exact path="/search" component={() => useDefaultLayout(<SearchResultsPage />)} />
+        <Route exact path="/checkout" component={() => useDefaultLayout(<CheckoutPage />)} />
       </div>
     </ConnectedRouter>
   </Provider>,

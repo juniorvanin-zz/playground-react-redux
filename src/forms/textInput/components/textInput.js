@@ -1,7 +1,9 @@
 import React from 'react'
 import { Field } from 'redux-form'
 
-const TextInputComponent = ({ input, label, type, meta: { touched, error, warning } }) => (
+const TextInputComponent = ({
+  input, label, type, meta: { touched, error, warning }
+}) => (
   <div>
     <label htmlFor={input.name}>{label}
       <input {...input} type={type} />
@@ -15,7 +17,8 @@ const TextInput = ({ name, label }) => (
     name={name}
     label={label}
     component={TextInputComponent}
-    type="text" />
+    type="text"
+  />
 )
 
 

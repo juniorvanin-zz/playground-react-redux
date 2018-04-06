@@ -1,9 +1,9 @@
 import React from 'react'
 import { formatMoney } from 'accounting'
-import ProccedToCheckoutButton from './../../proccedToCheckoutButton/components/proccedToCheckoutButton'
+import ProccedToCheckoutButton from './../proccedToCheckoutButton/components/proccedToCheckoutButton'
 
-const ShoppingCartDetails = ({ items }) => (
-  <div id="shopping-cart-details" style={{ display: 'none' }}>
+const ShoppingCartDetails = ({ items, displayShoppingCart }) => (
+  <div className={displayShoppingCart ? 'shopping-cart displayShoppingCart' : 'shopping-cart hideShoppingCart'}>
     {
       items.length === 0
       ? <p className="empty-shopping-cart">Your shopping cart is empty { ':(' } </p>

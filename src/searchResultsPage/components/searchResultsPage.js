@@ -2,7 +2,6 @@
 
 import React from 'react'
 import ItemList from './../../itemList/components/itemList'
-import Header from './../../header/components/header'
 import type { Item } from './../../types/domain'
 
 import './../../App.css'
@@ -18,12 +17,9 @@ const buildSearchMessage = (numberOfItems: number): string => {
 }
 
 const SearchResultsPage = ({ items }: Props) => (
-  <div>
-    <Header />
-    <div className="item-list">
-      <p className="search-result-message"> { buildSearchMessage(items.length) } </p>
-      <ItemList items={items} />
-    </div>
+  <div className="item-list">
+    <p className="search-result-message"> { buildSearchMessage(items.length) } </p>
+    <ItemList items={items} />
   </div>
 )
 
