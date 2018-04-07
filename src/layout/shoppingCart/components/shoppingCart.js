@@ -3,6 +3,8 @@ import { formatMoney } from 'accounting'
 import ProccedToCheckoutButton from './../proccedToCheckoutButton/components/proccedToCheckoutButton'
 import CloseButton from './../closeButton/containers/closeButton'
 
+import './../shoppingCart.css'
+
 import ShoppingCartIcon from './../../../resources/online-shopping.svg'
 
 const ShoppingCart = ({ items, displayShoppingCart }) => (
