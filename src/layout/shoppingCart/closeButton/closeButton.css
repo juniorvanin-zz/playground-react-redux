@@ -1,8 +1,12 @@
-.closeShoppingCart {
-  background-color: transparent;
+.closeShoppingCartButton {
+  background-color: #F3F3F3;
   border: 0px;
   position: fixed;
-  margin-left: -40px;
-  margin-top:10px;
+  margin-left: -210px;
   cursor: pointer;
+  padding: 10px;
+}
+
+.closeShoppingCartButton:focus {
+  outline: 0;
 }
