@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemList from './../../itemList/components/itemList'
 
-import './../../App.css'
+import './../searchResultsPage.css'
 
 const buildSearchMessage = (numberOfItems) => {
   if (numberOfItems === 1) {

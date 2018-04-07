@@ -1,5 +1,5 @@
 header {
-  background-color: #20232a;
+  background-color: #3F454B;
   display: flex;
   align-items: flex-end;
   flex-wrap: nowrap;
@@ -41,10 +41,10 @@ header form {
     padding: 12px;
     padding-left: 20px;
     font-size: 20px;
-    background-color: #47494c;
+    background-color: #F3F3F3;
     background-size: 25px;
     background-position: 7px;
-    color: white;
+    color: #3F454B;
     font-weight: 100;
     margin: 15px 10px;
 }
@@ -98,7 +98,7 @@ header form {
 }
 
 .shopping-cart {
-  background-color: #20232a;
+  background-color: #3F454B;
   height: 100vh;
   z-index: 1;
   transition: 0.5s;
@@ -149,7 +149,7 @@ header form {
   margin-right: 20px;
 }
 
-.shopping-cart button {
+.shopping-cart .procced-to-checkout-button {
   border: 1px solid transparent;
   font-size: 1rem;
   color: #fff;
@@ -160,6 +160,6 @@ header form {
   justify-content: center;
 }
 
-.shopping-cart button span {
+.shopping-cart .procced-to-checkout-button span {
   padding: 10px
 }

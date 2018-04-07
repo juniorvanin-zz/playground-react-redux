@@ -1,18 +1,20 @@
 import React from 'react'
 import { formatMoney } from 'accounting'
 import ProccedToCheckoutButton from './../proccedToCheckoutButton/components/proccedToCheckoutButton'
+import CloseButton from './../closeButton/containers/closeButton'
 
-const ShoppingCartDetails = ({ items, displayShoppingCart }) => (
+const ShoppingCart = ({ items, displayShoppingCart }) => (
   <div className={displayShoppingCart ? 'shopping-cart displayShoppingCart' : 'shopping-cart hideShoppingCart'}>
+    <CloseButton />
     {
       items.length === 0
       ? <p className="empty-shopping-cart">Your shopping cart is empty { ':(' } </p>
-      : buildShoppingCartDetails(items)
+      : buildShoppingCart(items)
     }
   </div>
 )
 
-const buildShoppingCartDetails = items => (
+const buildShoppingCart = items => (
   <React.Fragment>
     <ul>
       {
@@ -30,7 +32,6 @@ const buildShoppingCartDetails = items => (
   </React.Fragment>
 )
 
-
 const getTotal = items => items.map(item => item.price).reduce((a, b) => a + b, 0)
 
-export default ShoppingCartDetails
+export default ShoppingCart

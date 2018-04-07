@@ -1,0 +1,8 @@
+.closeShoppingCart {
+  background-color: transparent;
+  border: 0px;
+  position: fixed;
+  margin-left: -40px;
+  margin-top:10px;
+  cursor: pointer;
+}

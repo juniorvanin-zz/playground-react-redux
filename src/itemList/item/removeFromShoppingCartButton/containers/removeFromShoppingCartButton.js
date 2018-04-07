@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import RemoveFromShoppingCartButton from '../components/removeFromShoppingCartButton'
 import { removeFromCart } from '../../../../actions'
 
-const mapStateToProps = (state) => state
+const mapStateToProps = state => state
 
 const mapDispatchToProps = dispatch => ({
   removeFromCart: (id) => {
