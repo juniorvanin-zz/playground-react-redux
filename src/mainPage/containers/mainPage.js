@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import MainPage from '../components/mainPage'
+import { fetchProducts } from './../../actions'
 
 const mapStateToProps = state => (
   {
@@ -7,6 +8,12 @@ const mapStateToProps = state => (
   }
 )
 
-const connector = connect(mapStateToProps)
+const mapDispatchToProps = dispatch => ({
+  fetchProducts: () => {
+    dispatch(fetchProducts())
+  }
+})
+
+const connector = connect(mapStateToProps, mapDispatchToProps)
 
 export default connector(MainPage)

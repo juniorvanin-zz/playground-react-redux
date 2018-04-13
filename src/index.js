@@ -1,10 +1,12 @@
 import React from 'react'
+import thunkMiddleware from 'redux-thunk'
+import { Route } from 'react-router'
+
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { reducer as formReducer } from 'redux-form'
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import createHistory from 'history/createBrowserHistory'
-import { Route } from 'react-router'
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
 
 import shoppingCartReducer from './reducers/shoppingCartReducer'
@@ -16,9 +18,9 @@ import SearchResultsPage from './searchResultsPage/containers/searchResultsPage'
 import CheckoutPage from './checkoutPage/components/checkoutPage'
 import Layout from './layout/containers/layout'
 
-const middleware = routerMiddleware(history)
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const middlewares = [thunkMiddleware, routerMiddleware(history)]
 
 const store = createStore(
   combineReducers({
@@ -28,7 +30,7 @@ const store = createStore(
     application: applicationReducer,
     shoppingCart: shoppingCartReducer
   }),
-  composeEnhancers(applyMiddleware(middleware))
+  composeEnhancers(applyMiddleware(...middlewares))
 )
 
 const history = createHistory()
