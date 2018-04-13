@@ -1,13 +1,10 @@
 .closeShoppingCartButton {
   background-color: #F3F3F3;
   border: 0px;
-  position: fixed;
-  margin-left: -210px;
+  position: absolute;
+  left: 0;
   cursor: pointer;
   padding: 10px;
-  -webkit-box-shadow: -7px 8px 11px -7px rgba(0,0,0,0.52);
-  -moz-box-shadow: -7px 8px 11px -7px rgba(0,0,0,0.52);
-  box-shadow: -7px 8px 11px -7px rgba(0,0,0,0.52);
 }
 
 .closeShoppingCartButton:focus {
