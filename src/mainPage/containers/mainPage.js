@@ -4,7 +4,8 @@ import { fetchProducts } from './../../actions'
 
 const mapStateToProps = state => (
   {
-    items: state.items.availables
+    items: state.items.availables,
+    loading: state.items.availables.length === 0
   }
 )
 

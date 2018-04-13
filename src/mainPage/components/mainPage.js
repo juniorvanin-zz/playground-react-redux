@@ -10,7 +10,10 @@ class MainPage extends React.Component {
 
   render() {
     return (
+      <div>
+      { this.props.loading ? <div className="loading" /> : null }
       <ItemList items={this.props.items} />
+      </div>
     )
   }
 }
