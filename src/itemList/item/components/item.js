@@ -7,10 +7,10 @@ import './../item.css'
 const Item = ({ item, itemsAddedToCart }) => (
   <li className="col-3">
     <section className="item">
-      <span>$ { item.price }</span>
+      <img />
       <h2>{ item.title }</h2>
-      <img src={`../../../assets/products/${item.image}.svg`} alt="product thumbnail" />
       <p> { item.description }</p>
+      <span>$ { item.price }</span>
       {
         isProductAddedToShoppingCart(itemsAddedToCart, item.id)
         ? <RemoveFromShoppingCartButton item={item} />

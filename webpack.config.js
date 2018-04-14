@@ -48,7 +48,7 @@ module.exports = {
   },
   plugins: [
    new HtmlWebPackPlugin({
-     template: "./public/index.html",
+     template: "./public/index.html"
    }),
    new CopyWebpackPlugin([
     { from: './src/resources/products', to: 'assets/products' }

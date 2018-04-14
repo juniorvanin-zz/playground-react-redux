@@ -10,10 +10,12 @@ const hideShoppingCart = ({ displayShoppingCart, toggleShoppingCart }) => () => 
 
 const Layout = props => (
   <React.Fragment>
-    <section className="mainContent" onClick={hideShoppingCart(props)} onKeyDown={hideShoppingCart(props)} role="button" tabIndex="0">
+    <section className="pageWrapper" onClick={hideShoppingCart(props)} onKeyDown={hideShoppingCart(props)} role="button" tabIndex="0">
       <div className={props.displayShoppingCart ? 'overlay' : null} />
       <Header />
-      { props.children }
+      <section className="mainContent">
+        { props.children }
+      </section>
     </section>
     <ShoppingCart items={props.items} displayShoppingCart={props.displayShoppingCart} />
   </React.Fragment>

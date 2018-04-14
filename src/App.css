@@ -1,8 +1,11 @@
 body {
-  color: #5f6a7d;
+  color: #2e3b4e;
+  background-color: #F2F5F8;
   font-family: "Square Market",Helvetica,Arial,sans-serif;
   font-weight: 100;
 }
+
+html, body { margin: 0; padding: 0; }
 
 .loading {
   border: 6px solid #f3f3f3;
@@ -15,17 +18,13 @@ body {
   margin-top: 100px
 }
 
+.mainContent {
+  margin-top: 90px;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.shopping-card {
-   display: flex;
-   flex-wrap: wrap;
-   color: #5f6a7d;
-   padding: 0px;
-   list-style: none;
 }
 
 .item-list {
@@ -46,7 +45,7 @@ body {
 .col-12 {width: 100%;}
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 0px) and (max-width: 736px) {
+@media only screen and (min-width : 0px) and (max-width: 550px) {
   [class*="col-"] {
       width: 100%;
   }
@@ -71,12 +70,64 @@ body {
   header .shopping-cart-resume-quantity {
     display: none;
   }
+
+  .shopping-cart-resume {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .mainContent {
+    margin-top: 165px;
+  }
 }
 
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width : 736px) and (max-width : 1024px) {
+@media only screen and (min-width : 550px) and (max-width : 950px) {
   [class*="col-"] {
       width: 50%;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  header .logo {
+    width: 100%;
+  }
+
+  header form {
+    width: 85%;
+  }
+
+  header .shopping-cart-resume {
+    width: 15%;
+    min-width: 60px;
+  }
+
+  header .shopping-cart-resume-quantity {
+    display: none;
+  }
+
+  .shopping-cart-resume {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .mainContent {
+    margin-top: 165px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 950px) and (max-width : 1200px){
+  [class*="col-"] {
+      width: 33.33%;
+  }
+
+  .mainContent {
+      margin-top: 90px;
   }
 }

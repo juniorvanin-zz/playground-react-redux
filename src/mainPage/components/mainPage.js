@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemList from './../../itemList/components/itemList'
 
-import './../../App.css'
+import './../mainPage.css'
 
 class MainPage extends React.Component {
   componentDidMount() {
@@ -10,10 +10,10 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div>
-      { this.props.loading ? <div className="loading" /> : null }
-      <ItemList items={this.props.items} />
-      </div>
+      <React.Fragment>
+        { this.props.loading ? <div className="loading" /> : null }
+        <ItemList items={this.props.items} />
+      </React.Fragment>
     )
   }
 }

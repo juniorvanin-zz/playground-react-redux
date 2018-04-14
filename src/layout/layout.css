@@ -1,9 +1,9 @@
-.mainContent {
+.pageWrapper {
   display: flex;
   flex-direction: column;
 }
 
-.mainContent:focus {
+.pageWrapper:focus {
   outline: 0;
 }
 

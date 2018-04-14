@@ -2,7 +2,9 @@ header {
   background-color: #3F454B;
   display: flex;
   align-items: flex-end;
-  flex-wrap: nowrap;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  position: fixed;
 }
 
 header form {
