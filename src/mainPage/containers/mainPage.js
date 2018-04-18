@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import MainPage from '../components/mainPage'
-import { fetchProducts } from './../../actions'
+import { fetchProducts, fetchLatestGames } from './../../actions'
 
 const mapStateToProps = state => (
   {
@@ -12,6 +12,9 @@ const mapStateToProps = state => (
 const mapDispatchToProps = dispatch => ({
   fetchProducts: () => {
     dispatch(fetchProducts())
+  },
+  fetchLatestGames: () => {
+    dispatch(fetchLatestGames())
   }
 })
 

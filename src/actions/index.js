@@ -24,9 +24,22 @@ const receiveProducts = products => ({
   products
 })
 
+const receiveLatestGames = games => ({
+  type: 'RECEIVE_LATEST_GAMES',
+  games
+})
+
+
 export const fetchProducts = () => (dispatch) => {
   axios.get('http://localhost:8081/v1/products')
     .then(response => (
       dispatch(receiveProducts(response.data))
+    ))
+}
+
+export const fetchLatestGames = () => (dispatch) => {
+  axios.get('http://localhost:8081/v1/games')
+    .then(response => (
+      dispatch(receiveLatestGames(response.data))
     ))
 }

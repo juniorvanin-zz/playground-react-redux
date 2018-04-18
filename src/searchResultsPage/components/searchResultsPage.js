@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemList from './../../itemList/components/itemList'
+import GameList from './../../gameList/components/gameList'
 
 import './../searchResultsPage.css'
 
@@ -16,7 +16,7 @@ const buildSearchMessage = (numberOfItems) => {
 const SearchResultsPage = ({ items }) => (
   <div className="item-list">
     <p className="search-result-message"> { buildSearchMessage(items.length) } </p>
-    <ItemList items={items} />
+    <GameList items={items} />
   </div>
 )
 

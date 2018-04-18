@@ -2,9 +2,9 @@ import React from 'react'
 import AddToShoppingCartButton from './../addToShoppingCartButton/containers/addToShoppingCartButton'
 import RemoveFromShoppingCartButton from './../removeFromShoppingCartButton/containers/removeFromShoppingCartButton'
 
-import './../item.css'
+import './../game.css'
 
-const Item = ({ item, itemsAddedToCart }) => (
+const Game = ({ item, itemsAddedToCart }) => (
   <li className="col-3">
     <section className="item">
       <img />
@@ -24,4 +24,4 @@ const isProductAddedToShoppingCart = (itemsAddedToCart, id) => (
   itemsAddedToCart.includes(id)
 )
 
-export default Item
+export default Game

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Item from '../components/item'
+import Game from '../components/game'
 
 const mapStateToProps = state => ({
   itemsAddedToCart: state.shoppingCart.itemsAdded
@@ -7,4 +7,4 @@ const mapStateToProps = state => ({
 
 const connector = connect(mapStateToProps)
 
-export default connector(Item)
+export default connector(Game)

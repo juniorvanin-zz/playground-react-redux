@@ -1,18 +1,19 @@
 import React from 'react'
-import ItemList from './../../itemList/components/itemList'
+import GameList from './../../gameList/components/gameList'
 
 import './../mainPage.css'
 
 class MainPage extends React.Component {
   componentDidMount() {
     this.props.fetchProducts()
+    this.props.fetchLatestGames()
   }
 
   render() {
     return (
       <React.Fragment>
         { this.props.loading ? <div className="loading" /> : null }
-        <ItemList items={this.props.items} />
+        <GameList items={this.props.items} />
       </React.Fragment>
     )
   }

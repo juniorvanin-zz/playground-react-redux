@@ -12,6 +12,7 @@ import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-r
 import shoppingCartReducer from './reducers/shoppingCartReducer'
 import itemsReducer from './reducers/itemsReducer'
 import applicationReducer from './reducers/applicationReducer'
+import gamesReducer from './reducers/gamesReducer'
 
 import MainPage from './mainPage/containers/mainPage'
 import SearchResultsPage from './searchResultsPage/containers/searchResultsPage'
@@ -26,6 +27,7 @@ const store = createStore(
   combineReducers({
     form: formReducer,
     items: itemsReducer,
+    games: gamesReducer,
     router: routerReducer,
     application: applicationReducer,
     shoppingCart: shoppingCartReducer
